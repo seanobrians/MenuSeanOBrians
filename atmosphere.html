@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos · Ambiente Auténtico Irish Pub Valencia - Sean O'Brian's</title>
+    <meta name="description" content="Descubre el ambiente del pub irlandés Sean O'Brian's en Valencia. Decoración auténtica irlandesa, barra con cervezas importadas y el espacio perfecto para vivir el fútbol, el rugby y las noches de fiesta. Fotos reales del local.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://seanobrians.com/atmosphere.html">
+    <link rel="alternate" hreflang="es" href="https://seanobrians.com/atmosphere.html">
+    <link rel="alternate" hreflang="en" href="https://seanobrians.com/en/coming-soon-atmosphere.html">
+    <link rel="alternate" hreflang="x-default" href="https://seanobrians.com/atmosphere.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ambiente Auténtico · Sean O'Brian's Irish Pub Valencia">
+    <meta property="og:description" content="Fotos reales del interior del pub irlandés Sean O'Brian's en Valencia. Decoración auténtica, música en vivo y el mejor ambiente de la ciudad.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seanobrians.com/atmosphere.html">
+    <meta property="og:image" content="https://seanobrians.com/Sean%20O%C2%B4Brian%C2%B4s/Foto1.jpg">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Sean O'Brian's Irish Pub Valencia">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ambiente Auténtico · Sean O'Brian's Irish Pub Valencia">
+    <meta name="twitter:description" content="Fotos reales del interior del pub irlandés Sean O'Brian's en Valencia.">
+    <meta name="twitter:image" content="https://seanobrians.com/Sean%20O%C2%B4Brian%C2%B4s/Foto1.jpg">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BarOrPub",
+      "name": "Sean O'Brian's Irish Pub",
+      "image": [
+        "https://seanobrians.com/Sean%20O%C2%B4Brian%C2%B4s/Foto1.jpg",
+        "https://seanobrians.com/Sean%20O%C2%B4Brian%C2%B4s/DSC_9168.jpg",
+        "https://seanobrians.com/Sean%20O%C2%B4Brian%C2%B4s/DSC_9186.jpg"
+      ],
+      "url": "https://seanobrians.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Argenter Suárez, 9",
+        "addressLocality": "Valencia",
+        "addressCountry": "ES"
+      },
+      "servesCuisine": "Irish Pub",
+      "description": "Auténtico pub irlandés en el corazón de Valencia con decoración tradicional, cervezas importadas y retransmisión de deportes en directo."
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Cinzel+Decorative:wght@700&family=Lato:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Cinzel+Decorative:wght@700&family=Lato:wght@400;600;700&display=swap"></noscript>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logoTransparente.svg">
+
+    <style>
+        /* ══════════════════════════════════════
+           HERO
+        ══════════════════════════════════════ */
+        .gallery-hero {
+            background: var(--dark-green);
+            padding: 3.5rem 1.5rem 2.8rem;
+            text-align: center;
+        }
+
+        .gallery-hero h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--light-gold);
+            font-size: clamp(1.45rem, 5vw, 2.4rem);
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            line-height: 1.25;
+            margin-bottom: 0.9rem;
+        }
+
+        .gallery-hero p {
+            color: rgba(249, 247, 244, 0.78);
+            font-size: clamp(0.88rem, 2.5vw, 1rem);
+            max-width: 580px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .hero-ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            margin-top: 1.6rem;
+        }
+
+        .hero-ornament span {
+            display: block;
+            width: 50px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.45;
+        }
+
+        .hero-ornament i {
+            display: block;
+            width: 5px;
+            height: 5px;
+            background: var(--gold);
+            transform: rotate(45deg);
+            opacity: 0.7;
+        }
+
+        /* ══════════════════════════════════════
+           GALERÍA — foto hero Foto1.jpg
+        ══════════════════════════════════════ */
+        .gallery-wrap {
+            background: #111;
+        }
+
+        .hero-photo {
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: clamp(200px, 52vw, 520px);
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.4s ease, filter 0.4s ease;
+            filter: brightness(0.88);
+        }
+
+        .hero-photo:hover img {
+            transform: scale(1.025);
+            filter: brightness(1);
+        }
+
+        .hero-photo-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 1.2rem 1rem;
+            background: linear-gradient(transparent, rgba(10, 4, 8, 0.7));
+            color: rgba(201, 169, 97, 0.9);
+            font-family: 'Lato', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        /* ══════════════════════════════════════
+           GRID — todas las demás fotos
+        ══════════════════════════════════════ */
+        .photo-grid {
+            display: grid;
+            gap: 3px;
+            /* Móvil: 2 columnas */
+            grid-template-columns: repeat(2, 1fr);
+            background: #111;
+            padding: 3px;
+        }
+
+        /* Tablet: 3 columnas */
+        @media (min-width: 560px) {
+            .photo-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        /* Desktop: 4 columnas */
+        @media (min-width: 900px) {
+            .photo-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        /* Cada celda: relación de aspecto fija 3:2, imagen con cover */
+        .photo-cell {
+            aspect-ratio: 3 / 2;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            background: #1a0a12;
+        }
+
+        .photo-cell img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.35s ease, filter 0.35s ease;
+            filter: brightness(0.88);
+        }
+
+        .photo-cell:hover img {
+            transform: scale(1.06);
+            filter: brightness(1);
+        }
+
+        /* Sutil overlay dorado en hover */
+        .photo-cell::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(201, 169, 97, 0.08);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .photo-cell:hover::after { opacity: 1; }
+
+        /* Icono de lupa al hover — solo escritorio */
+        @media (hover: hover) {
+            .photo-cell::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' fill='none' stroke='%23c9a961' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='16.5' y1='16.5' x2='24' y2='24'/%3E%3C/svg%3E") center / 28px no-repeat;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+                z-index: 2;
+            }
+
+            .photo-cell:hover::before { opacity: 1; }
+        }
+
+        /* ══════════════════════════════════════
+           CTA INSTAGRAM
+        ══════════════════════════════════════ */
+        .gallery-cta {
+            background: var(--dark-green);
+            padding: 2.4rem 1.5rem;
+            text-align: center;
+        }
+
+        .gallery-cta p {
+            color: rgba(249, 247, 244, 0.72);
+            font-size: 0.9rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .gallery-cta .instagram-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--cream);
+            padding: 0.65rem 1.4rem;
+            border-radius: 3px;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            transition: background 0.2s, color 0.2s;
+            box-shadow: none;
+            margin-top: 0;
+            transform: none;
+        }
+
+        .gallery-cta .instagram-btn svg {
+            width: 15px;
+            height: 15px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        .gallery-cta .instagram-btn:hover {
+            background: var(--gold);
+            color: var(--dark-green);
+            transform: none;
+        }
+
+        /* ══════════════════════════════════════
+           LIGHTBOX
+        ══════════════════════════════════════ */
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(6, 2, 5, 0.96);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            touch-action: none;
+        }
+
+        #lightbox.active { display: flex; }
+
+        #lightbox-img {
+            max-width: 94vw;
+            max-height: 86vh;
+            object-fit: contain;
+            display: block;
+            border-radius: 2px;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.8);
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        /* Botón cerrar */
+        #lightbox-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 52px;
+            height: 52px;
+            background: rgba(74, 24, 37, 0.85);
+            border: none;
+            color: var(--gold);
+            font-size: 1.6rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            transition: background 0.2s;
+        }
+
+        #lightbox-close:hover { background: var(--primary-green); }
+
+        /* Flechas */
+        #lightbox-prev,
+        #lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 64px;
+            background: rgba(74, 24, 37, 0.7);
+            border: none;
+            color: var(--gold);
+            font-size: 1.7rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            transition: background 0.2s;
+        }
+
+        #lightbox-prev { left: 0.5rem; }
+        #lightbox-next { right: 0.5rem; }
+
+        #lightbox-prev:hover,
+        #lightbox-next:hover { background: rgba(74, 24, 37, 1); }
+
+        /* Contador y pie */
+        #lightbox-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0.6rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        #lightbox-counter {
+            color: rgba(201, 169, 97, 0.6);
+            font-family: 'Lato', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+        }
+
+        /* En móvil, flechas más discretas y accesibles */
+        @media (max-width: 560px) {
+            #lightbox-prev { left: 0; border-radius: 0 2px 2px 0; }
+            #lightbox-next { right: 0; border-radius: 2px 0 0 2px; }
+            #lightbox-prev,
+            #lightbox-next { width: 38px; height: 56px; font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logoTransparente.svg" alt="Sean O'Brian's logo" class="logo-shamrock">
+                    <div class="logo-text">
+                        <span class="logo-name">Sean O'Brian's</span>
+                        <span class="logo-sub">Irish Bar</span>
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="index.html#sobre-nosotros" data-i18n="nav.about">Nosotros</a></li>
+                <li><a href="index.html#ubicacion" data-i18n="nav.location">Ubicación</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <button id="langToggle">
+                    <span id="langCurrent">ES</span>
+                    <svg viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M0 0l5 6 5-6z"/></svg>
+                </button>
+                <ul class="lang-dropdown">
+                    <li><button data-lang="es">Español</button></li>
+                    <li><button data-lang="en">English</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero de texto -->
+    <section class="gallery-hero">
+        <h1 data-i18n="atmosphere.title">Nuestro Ambiente</h1>
+        <p data-i18n="atmosphere.hero.desc">Decoración auténtica irlandesa, barra clásica de pub y el rincón perfecto para disfrutar con amigos. Así es Sean O'Brian's, el Irish Pub en el corazón de Valencia.</p>
+        <div class="hero-ornament"><span></span><i></i><span></span></div>
+    </section>
+
+    <!-- Galería -->
+    <div class="gallery-wrap">
+
+        <!-- Foto1.jpg: foto destacada a ancho completo -->
+        <div class="hero-photo" data-lb="0" tabindex="0" role="button" aria-label="Ver foto 1 – interior del pub">
+            <img
+                src="Sean%20O%C2%B4Brian%C2%B4s/Foto1.jpg"
+                alt="Interior del pub irlandés Sean O'Brian's Valencia – vista general del local con decoración auténtica irlandesa"
+                width="1000" height="668"
+                fetchpriority="high"
+            >
+            <span class="hero-photo-label">Sean O'Brian's Irish Pub · Valencia</span>
+        </div>
+
+        <!-- Grid de fotos -->
+        <div class="photo-grid" id="photo-grid">
+
+            <div class="photo-cell" data-lb="1" tabindex="0" role="button" aria-label="Ver foto 2">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9168.jpg"
+                    alt="Barra principal del Irish Pub Sean O'Brian's en Valencia con grifos de cerveza"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="2" tabindex="0" role="button" aria-label="Ver foto 3">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9170.jpg"
+                    alt="Decoración auténtica irlandesa en el pub Sean O'Brian's Valencia"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="3" tabindex="0" role="button" aria-label="Ver foto 4">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9172.jpg"
+                    alt="Zona de mesas con ambiente acogedor en Sean O'Brian's Irish Pub Valencia"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="4" tabindex="0" role="button" aria-label="Ver foto 5">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9175.jpg"
+                    alt="Detalle de la decoración del pub irlandés Sean O'Brian's Valencia"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="5" tabindex="0" role="button" aria-label="Ver foto 6">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9177.jpg"
+                    alt="Ambiente de pub irlandés en Sean O'Brian's – iluminación cálida y decoración"
+                    loading="lazy" width="800" height="1200" style="object-position: center top;">
+            </div>
+
+            <div class="photo-cell" data-lb="6" tabindex="0" role="button" aria-label="Ver foto 7">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9180.jpg"
+                    alt="Interior del Irish Pub Sean O'Brian's con mobiliario de madera tradicional"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="7" tabindex="0" role="button" aria-label="Ver foto 8">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9182.jpg"
+                    alt="Zona de estar del pub irlandés Sean O'Brian's en Valencia"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="8" tabindex="0" role="button" aria-label="Ver foto 9">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9184.jpg"
+                    alt="Estantería y decoración de whiskey en el Irish Pub Sean O'Brian's Valencia"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="9" tabindex="0" role="button" aria-label="Ver foto 10">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9186.jpg"
+                    alt="Pantallas de deportes y grifos de cerveza en Sean O'Brian's Valencia"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="10" tabindex="0" role="button" aria-label="Ver foto 11">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9188.jpg"
+                    alt="Grifo de Guinness en la barra del pub irlandés Sean O'Brian's"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="11" tabindex="0" role="button" aria-label="Ver foto 12">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9189.jpg"
+                    alt="Vista vertical del interior acogedor del Irish Pub Sean O'Brian's Valencia"
+                    loading="lazy" width="801" height="1200" style="object-position: center top;">
+            </div>
+
+            <div class="photo-cell" data-lb="12" tabindex="0" role="button" aria-label="Ver foto 13">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9191.jpg"
+                    alt="Ambiente nocturno en el pub irlandés Sean O'Brian's Valencia"
+                    loading="lazy" width="1000" height="667">
+            </div>
+
+            <div class="photo-cell" data-lb="13" tabindex="0" role="button" aria-label="Ver foto 14">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9194.jpg"
+                    alt="Zona de asientos y barra del Irish Pub Sean O'Brian's en Valencia"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="14" tabindex="0" role="button" aria-label="Ver foto 15">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9197.jpg"
+                    alt="Decoración con banderas y elementos irlandeses en Sean O'Brian's"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="15" tabindex="0" role="button" aria-label="Ver foto 16">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9200.jpg"
+                    alt="Rincón del pub irlandés Sean O'Brian's Valencia con iluminación de ambiente"
+                    loading="lazy" width="801" height="1200" style="object-position: center;">
+            </div>
+
+            <div class="photo-cell" data-lb="16" tabindex="0" role="button" aria-label="Ver foto 17">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9201.jpg"
+                    alt="Vista panorámica del interior del Irish Pub Sean O'Brian's Valencia"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="17" tabindex="0" role="button" aria-label="Ver foto 18">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9203.jpg"
+                    alt="Barra surtida de cervezas y destilados en Sean O'Brian's Valencia"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="18" tabindex="0" role="button" aria-label="Ver foto 19">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9210.jpg"
+                    alt="Espacio amplio del Irish Pub Sean O'Brian's listo para eventos y deportes"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="19" tabindex="0" role="button" aria-label="Ver foto 20">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9216.jpg"
+                    alt="Decoración de madera y bronce auténtica del pub irlandés Sean O'Brian's Valencia"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="20" tabindex="0" role="button" aria-label="Ver foto 21">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9217.jpg"
+                    alt="Detalle vertical de la decoración irlandesa en Sean O'Brian's Irish Pub"
+                    loading="lazy" width="801" height="1200" style="object-position: center;">
+            </div>
+
+            <div class="photo-cell" data-lb="21" tabindex="0" role="button" aria-label="Ver foto 22">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9219.jpg"
+                    alt="Zona central del pub irlandés Sean O'Brian's Valencia con barra visible"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="22" tabindex="0" role="button" aria-label="Ver foto 23">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9222.jpg"
+                    alt="Ambiente cálido del Irish Pub Sean O'Brian's Valencia – perfecto para salir con amigos"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="23" tabindex="0" role="button" aria-label="Ver foto 24">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9224.jpg"
+                    alt="Vista final del interior renovado del pub irlandés Sean O'Brian's en Valencia"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+            <div class="photo-cell" data-lb="24" tabindex="0" role="button" aria-label="Ver foto 25">
+                <img src="Sean%20O%C2%B4Brian%C2%B4s/DSC_9213.jpg"
+                    alt="Ambiente del pub irlandés Sean O'Brian's Valencia – barra y decoración tradicional"
+                    loading="lazy" width="1000" height="668">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CTA Instagram -->
+    <div class="gallery-cta">
+        <p>¿Quieres ver más? Síguenos en Instagram para no perderte nada.</p>
+        <a href="https://www.instagram.com/seanobriansvlc" target="_blank" rel="noopener" class="instagram-btn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @seanobriansvlc
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer.rights">&copy; 2026 Sean O'Brian's - Pub Irlandés. Todos los derechos reservados.</p>
+            <p data-i18n="footer.address">Calle Argenter Suárez, 9 · Valencia</p>
+            <p class="irish-blessing" data-i18n="footer.blessing">Céad míle fáilte</p>
+            <a href="https://www.instagram.com/seanobriansvlc" target="_blank" rel="noopener" class="footer-instagram">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                @seanobriansvlc
+            </a>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de fotos">
+        <button id="lightbox-close" aria-label="Cerrar">&times;</button>
+        <button id="lightbox-prev" aria-label="Foto anterior">&#8249;</button>
+        <img id="lightbox-img" src="" alt="">
+        <button id="lightbox-next" aria-label="Foto siguiente">&#8250;</button>
+        <div id="lightbox-footer">
+            <span id="lightbox-counter"></span>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script>
+    (function () {
+        // Ocultar celdas con imagen rota (evita huecos grises)
+        document.querySelectorAll('.photo-cell img, .hero-photo img').forEach(function (img) {
+            img.addEventListener('error', function () {
+                var cell = this.closest('.photo-cell, .hero-photo');
+                if (cell) cell.style.display = 'none';
+            });
+        });
+
+        // Recopilar todas las fotos en orden: hero + grid (solo las visibles)
+        var hero = document.querySelector('.hero-photo');
+        var cells = Array.from(document.querySelectorAll('.photo-cell'));
+        var all = [hero].concat(cells);
+        var total = all.length;
+
+        var lb       = document.getElementById('lightbox');
+        var lbImg    = document.getElementById('lightbox-img');
+        var lbClose  = document.getElementById('lightbox-close');
+        var lbPrev   = document.getElementById('lightbox-prev');
+        var lbNext   = document.getElementById('lightbox-next');
+        var lbCount  = document.getElementById('lightbox-counter');
+        var current  = 0;
+
+        function show(idx) {
+            current = (idx + total) % total;
+            var img = all[current].querySelector('img');
+            lbImg.src = img.src;
+            lbImg.alt = img.alt;
+            lbCount.textContent = (current + 1) + ' / ' + total;
+            lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            lbImg.focus();
+        }
+
+        function hide() {
+            lb.classList.remove('active');
+            document.body.style.overflow = '';
+            lbImg.src = '';
+        }
+
+        // Click en fotos
+        all.forEach(function (el, i) {
+            el.addEventListener('click', function () { show(i); });
+            el.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(i); }
+            });
+        });
+
+        lbClose.addEventListener('click', hide);
+        lbPrev.addEventListener('click', function () { show(current - 1); });
+        lbNext.addEventListener('click', function () { show(current + 1); });
+
+        // Cerrar al hacer clic fuera de la imagen
+        lb.addEventListener('click', function (e) {
+            if (e.target === lb) hide();
+        });
+
+        // Teclado
+        document.addEventListener('keydown', function (e) {
+            if (!lb.classList.contains('active')) return;
+            if (e.key === 'Escape')      hide();
+            if (e.key === 'ArrowLeft')   show(current - 1);
+            if (e.key === 'ArrowRight')  show(current + 1);
+        });
+
+        // Swipe táctil para móvil
+        var touchStartX = 0;
+        lb.addEventListener('touchstart', function (e) {
+            touchStartX = e.changedTouches[0].clientX;
+        }, { passive: true });
+
+        lb.addEventListener('touchend', function (e) {
+            var dx = e.changedTouches[0].clientX - touchStartX;
+            if (Math.abs(dx) < 40) return;
+            if (dx < 0) show(current + 1);
+            else         show(current - 1);
+        }, { passive: true });
+    })();
+    </script>
+</body>
+</html>

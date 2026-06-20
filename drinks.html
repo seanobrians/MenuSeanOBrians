@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Carta – Sean O'Brian's Irish Pub Valencia</title>
+  <meta name="description" content="Carta de bebidas de Sean O'Brian's Irish Pub Valencia.">
+  <link rel="manifest" href="MenuSeanOBrians/dist/manifest.json">
+  <link rel="canonical" href="https://seanobrians.com/drinks.html">
+  <link rel="alternate" hreflang="es" href="https://seanobrians.com/drinks.html">
+  <link rel="alternate" hreflang="en" href="https://seanobrians.com/en/coming-soon-beers.html">
+  <link rel="alternate" hreflang="x-default" href="https://seanobrians.com/drinks.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Carta – Sean O'Brian's Irish Pub Valencia">
+  <meta property="og:image" content="https://seanobrians.com/guinness.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://seanobrians.com/drinks.html">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap"></noscript>
+
+  <script type="module" crossorigin src="./drinks-assets/index-D1hdGOJb.js"></script>
+  <link rel="stylesheet" crossorigin href="./drinks-assets/index-DjDvI_ES.css">
+
+  <style>
+
+  /* ──────────────────────────────────────
+     RESET BASE
+  ────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif !important;
+    background: #0c0c0c !important;
+    color: rgba(255,255,255,0.8) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh !important;
+    overflow-x: clip !important;
+    overflow-y: auto !important;
+  }
+
+  /* Ocultar mockups y botellas */
+  .mockup, .spark, .pint-glass, .gin-bowl, .wine-glass,
+  .shot-glass, .coffee-cup, .plate-shape, .pizza-shape,
+  .rocks-glass, .bottle-body, .banner-rail,
+  .products img, .product-card img, .group img, .view img,
+  [class*="bottle"] { display: none !important; }
+
+
+  /* ──────────────────────────────────────
+     TOPBAR
+  ────────────────────────────────────── */
+  .sob-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(1rem, 4vw, 2.5rem);
+    height: 48px;
+    background: #080808;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    position: relative;
+    z-index: 300;
+  }
+
+  .sob-back {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.28);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s;
+  }
+  .sob-back:hover { color: rgba(255,255,255,0.65); }
+  .sob-back svg {
+    width: 14px; height: 14px;
+    stroke: currentColor; fill: none;
+    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  }
+
+  /* .top-actions — OBLIGATORIO para el Vue JS */
+  .top-actions {
+    display: flex !important;
+    gap: 0.15rem !important;
+  }
+  .lang-button {
+    background: transparent !important;
+    border: none !important;
+    color: rgba(255,255,255,0.22) !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    padding: 0.25rem 0.5rem !important;
+    cursor: pointer !important;
+    transition: color 0.2s !important;
+    border-radius: 3px !important;
+  }
+  .lang-button:hover { color: rgba(255,255,255,0.6) !important; }
+  .lang-button[aria-pressed="true"] {
+    color: #dba82a !important;
+    background: rgba(219,168,42,0.08) !important;
+  }
+
+
+  /* ──────────────────────────────────────
+     HERO — foto guinness
+  ────────────────────────────────────── */
+  .sob-hero {
+    position: relative;
+    width: 100%;
+    height: clamp(260px, 48vw, 520px);
+    background: url('./guinness.jpg') center 35% / cover no-repeat;
+    overflow: hidden;
+  }
+  .sob-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(to top, #0c0c0c 0%, rgba(10,10,10,0.35) 55%, transparent 100%),
+      linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 60%);
+  }
+  .sob-hero-content {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: clamp(1.2rem, 4vw, 2.5rem) clamp(1.2rem, 5vw, 3rem);
+    z-index: 2;
+  }
+  .sob-eyebrow {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(0.55rem, 1.2vw, 0.65rem);
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(219,168,42,0.6);
+    margin-bottom: clamp(0.3rem, 1vw, 0.6rem);
+  }
+  .sob-title {
+    font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
+    font-size: clamp(1.8rem, 6vw, 5.5rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: clamp(1px, 0.6vw, 5px);
+    line-height: 1;
+    margin: 0;
+    text-shadow: 0 2px 32px rgba(0,0,0,0.7);
+  }
+
+
+  /* ──────────────────────────────────────
+     NAV CATEGORÍAS — sticky bajo el hero
+  ────────────────────────────────────── */
+  .bottom-nav {
+    position: sticky !important;
+    top: 0 !important; bottom: auto !important;
+    left: 0 !important; right: 0 !important;
+    transform: none !important;
+    width: 100% !important; max-width: 100% !important;
+    min-height: auto !important; border-radius: 0 !important;
+    z-index: 200 !important;
+    overflow: visible !important;
+
+    background: rgba(8,8,8,0.97) !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.6) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    display: block !important;
+    padding: 0 !important;
+  }
+  .bottom-nav::before { display: none !important; }
+  .pub-nav-header      { display: none !important; }
+
+  .nav-scroll {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.3rem !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding: 0.5rem clamp(0.8rem, 3vw, 1.5rem) !important;
+    background: transparent !important;
+    /* evitar que el sticky padre corte los tabs */
+    clip: unset !important;
+    clip-path: none !important;
+  }
+  .nav-scroll::-webkit-scrollbar { display: none !important; }
+
+  .nav-tab {
+    flex: 0 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.45rem clamp(0.75rem, 2vw, 1.1rem) !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: clamp(0.72rem, 1.5vw, 0.8rem) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.3px !important;
+    text-transform: none !important;
+    color: rgba(255,255,255,0.38) !important;
+    background: rgba(255,255,255,0.04) !important;
+    border: 1px solid rgba(255,255,255,0.07) !important;
+    border-radius: 20px !important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+    transition: color 0.18s, background 0.18s, border-color 0.18s !important;
+    position: relative !important;
+    line-height: 1 !important;
+  }
+  .nav-tab::before, .nav-tab::after { display: none !important; }
+  .nav-tab:hover {
+    color: rgba(255,255,255,0.7) !important;
+    background: rgba(255,255,255,0.07) !important;
+  }
+  .nav-tab.is-active {
+    color: #0c0c0c !important;
+    background: #dba82a !important;
+    border-color: #dba82a !important;
+    font-weight: 700 !important;
+  }
+  .nav-label { line-height: 1 !important; }
+
+
+  /* ──────────────────────────────────────
+     ANTI-CLIP — anula overflow:hidden del Vue
+     en todos los contenedores de contenido
+  ────────────────────────────────────── */
+  .app-shell,
+  .view,
+  .section-wrapper,
+  .group,
+  .products,
+  .product-card,
+  .product-main,
+  .product-heading,
+  .description,
+  .price-stack,
+  .price-pill,
+  .banner,
+  .deal-grid,
+  .deal-card {
+    overflow: visible !important;
+    max-height: none !important;
+    clip: unset !important;
+    clip-path: none !important;
+  }
+
+
+  /* ──────────────────────────────────────
+     APP-SHELL / VIEW
+  ────────────────────────────────────── */
+  .app-shell {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #0c0c0c !important;
+    min-height: 0 !important;
+  }
+
+  .view {
+    max-width: 1040px !important;
+    margin: 0 auto !important;
+    padding: 0 clamp(1rem, 4vw, 2rem) 6rem !important;
+    background: transparent !important;
+    min-height: 0 !important;
+    color: rgba(255,255,255,0.8) !important;
+    counter-reset: sob-sec !important;
+  }
+
+
+  /* ──────────────────────────────────────
+     SECCIONES
+  ────────────────────────────────────── */
+  .section-wrapper {
+    padding-top: clamp(2.5rem, 5vw, 4rem) !important;
+    counter-increment: sob-sec !important;
+    position: relative !important;
+  }
+  .section-wrapper::before { display: none !important; }
+  .section-wrapper + .section-wrapper {
+    border-top: 1px solid rgba(255,255,255,0.05) !important;
+  }
+
+  .section-kicker { display: none !important; }
+
+  /* Cabecera de sección */
+  .section-heading {
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 0.8rem !important;
+    margin: 0 0 0.35rem !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: clamp(0.5rem, 1vw, 0.58rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: 5px !important;
+    text-transform: uppercase !important;
+    color: rgba(255,255,255,0.45) !important;
+    line-height: 1 !important;
+  }
+  /* Número de sección pequeño */
+  .section-heading::before {
+    content: counter(sob-sec, decimal-leading-zero) !important;
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.65rem !important;
+    font-weight: 400 !important;
+    color: rgba(219,168,42,0.35) !important;
+    flex-shrink: 0 !important;
+  }
+  /* Línea dorada bajo el título */
+  .section-heading::after {
+    content: '' !important;
+    flex: 1 !important;
+    height: 1px !important;
+    background: rgba(219,168,42,0.18) !important;
+    display: block !important;
+    margin-bottom: 0.1rem !important;
+  }
+
+  .section-subtitle { display: none !important; }
+
+
+  /* ──────────────────────────────────────
+     BANNER — ocultar todo el bloque
+     Solo mostramos título y subtítulo
+     en la cabecera de sección ya visible
+  ────────────────────────────────────── */
+  .banner {
+    display: none !important;
+  }
+
+
+  /* ──────────────────────────────────────
+     GRUPOS
+  ────────────────────────────────────── */
+  .group {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  .group + .group {
+    padding-top: clamp(0.5rem, 1.5vw, 0.8rem) !important;
+  }
+
+  .group-title {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.55rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 3.5px !important;
+    text-transform: uppercase !important;
+    color: rgba(255,255,255,0.16) !important;
+    margin: clamp(0.6rem, 1.5vw, 0.9rem) 0 0.4rem !important;
+    padding: 0 !important;
+  }
+  .group-title::before, .group-title::after { display: none !important; }
+
+  .products {
+    display: block !important;
+    background: transparent !important;
+  }
+
+
+  /* ──────────────────────────────────────
+     FILA DE PRODUCTO
+     Nombre izquierda — precio derecha
+  ────────────────────────────────────── */
+  .product-card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 0.8rem !important;
+    padding: clamp(0.65rem, 1.5vw, 0.85rem) 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    break-inside: avoid !important;
+    transition: background 0.15s !important;
+    overflow: visible !important;
+    min-height: 0 !important;
+  }
+  .product-card:last-child { border-bottom: none !important; }
+  .product-card::before { display: none !important; }
+  .product-card::after  { display: none !important; }
+  .product-card:hover   { background: rgba(255,255,255,0.02) !important; }
+  .product-card.is-highlighted {
+    background: rgba(219,168,42,0.04) !important;
+    border-left: 2px solid rgba(219,168,42,0.35) !important;
+    padding-left: 0.7rem !important;
+    margin-left: -0.7rem !important;
+  }
+
+  /* Zona del nombre */
+  .product-main {
+    flex: 1 !important;
+    min-width: 0 !important;
+    display: block !important;
+  }
+  .product-main::after { display: none !important; }
+
+  .product-heading {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.45rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  .product-name {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: clamp(0.85rem, 1.6vw, 0.95rem) !important;
+    font-weight: 400 !important;
+    color: rgba(255,255,255,0.85) !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+  }
+
+  .badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 0.05rem 0.35rem !important;
+    border: 1px solid rgba(219,168,42,0.22) !important;
+    color: rgba(219,168,42,0.5) !important;
+    background: transparent !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.42rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    border-radius: 2px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .description {
+    display: block !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: clamp(0.72rem, 1.3vw, 0.78rem) !important;
+    font-weight: 300 !important;
+    color: rgba(255,255,255,0.28) !important;
+    margin: 0.25rem 0 0 !important;
+    line-height: 1.45 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    overflow: visible !important;
+    max-width: 100% !important;
+    max-height: none !important;
+  }
+
+
+  /* ──────────────────────────────────────
+     PRECIOS — derecha, columnas verticales
+  ────────────────────────────────────── */
+  .price-stack {
+    flex-shrink: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 0 !important;
+    padding-top: 0.15rem !important;
+  }
+
+  .price-pill {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    padding: 0 clamp(0.35rem, 0.8vw, 0.55rem) !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    white-space: nowrap !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+  }
+  .price-pill:first-child { padding-left: 0 !important; }
+  .price-pill:last-child  { padding-right: 0 !important; }
+  .price-pill + .price-pill {
+    border-left: 1px solid rgba(255,255,255,0.07) !important;
+  }
+  .price-pill.is-muted { opacity: 0.25 !important; }
+
+  .price-label {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: clamp(0.38rem, 0.7vw, 0.42rem) !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    color: rgba(255,255,255,0.18) !important;
+    line-height: 1 !important;
+    margin-bottom: 0.1rem !important;
+  }
+  .price-value {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: clamp(0.88rem, 1.5vw, 1rem) !important;
+    font-weight: 700 !important;
+    color: #dba82a !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+  }
+
+
+  /* ──────────────────────────────────────
+     DEAL GRID
+  ────────────────────────────────────── */
+  .deal-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(100px, 22vw, 150px), 1fr)) !important;
+    gap: 1px !important;
+    background: rgba(255,255,255,0.06) !important;
+    margin: clamp(0.3rem, 1vw, 0.6rem) 0 !important;
+    overflow: hidden !important;
+    border-radius: 4px !important;
+  }
+  .deal-card {
+    background: #0c0c0c !important;
+    padding: clamp(0.8rem, 2vw, 1.1rem) clamp(0.6rem, 1.5vw, 0.9rem) !important;
+    text-align: center !important;
+    border: none !important;
+    border-radius: 0 !important;
+    transition: background 0.15s !important;
+  }
+  .deal-card:hover { background: rgba(219,168,42,0.05) !important; }
+  .deal-card .product-name {
+    font-size: clamp(0.78rem, 1.4vw, 0.88rem) !important;
+    color: rgba(255,255,255,0.82) !important;
+    text-align: center !important;
+  }
+  .deal-price {
+    display: block !important;
+    margin-top: 0.3rem !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: clamp(1rem, 2vw, 1.2rem) !important;
+    font-weight: 700 !important;
+    color: #dba82a !important;
+  }
+  .deal-grid img { display: none !important; }
+
+
+  /* ──────────────────────────────────────
+     FOOTER
+  ────────────────────────────────────── */
+  .sob-footer {
+    text-align: center;
+    padding: 2.5rem 1rem 4rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 0;
+  }
+  .sob-footer p {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(0.42rem, 0.9vw, 0.52rem);
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: rgba(219,168,42,0.2);
+    margin: 0;
+  }
+
+
+
+
+  /* ──────────────────────────────────────
+     RESPONSIVE — TABLET 600–899px
+  ────────────────────────────────────── */
+  @media (min-width: 600px) {
+    .products {
+      column-count: 2 !important;
+      column-gap: clamp(1.5rem, 4vw, 2.5rem) !important;
+      column-rule: 1px solid rgba(255,255,255,0.04) !important;
+    }
+    .product-card { break-inside: avoid !important; }
+  }
+
+
+  /* ──────────────────────────────────────
+     RESPONSIVE — DESKTOP ≥ 900px
+  ────────────────────────────────────── */
+  @media (min-width: 900px) {
+    .view { padding: 0 clamp(1.5rem, 3vw, 2.5rem) 6rem !important; }
+
+    .section-heading { font-size: 0.6rem !important; letter-spacing: 6px !important; }
+
+    .products {
+      column-count: 2 !important;
+      column-gap: 3rem !important;
+    }
+
+    .price-value { font-size: 1rem !important; }
+  }
+
+
+  /* ──────────────────────────────────────
+     RESPONSIVE — WIDE ≥ 1200px
+  ────────────────────────────────────── */
+  @media (min-width: 1200px) {
+    .view { max-width: 1100px !important; }
+    .products { column-count: 3 !important; column-gap: 3.5rem !important; }
+  }
+
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <header class="sob-topbar">
+    <a href="index.html" class="sob-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Inicio
+    </a>
+    <!-- .top-actions OBLIGATORIO — el Vue JS lo busca para cambio de idioma -->
+    <div class="top-actions">
+      <button class="lang-button" type="button" data-lang="es">ES</button>
+      <button class="lang-button" type="button" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="sob-hero">
+    <div class="sob-hero-content">
+      <span class="sob-eyebrow">Irish Pub &middot; Valencia</span>
+      <h1 class="sob-title">Sean O'Brian's</h1>
+    </div>
+  </div>
+
+  <!-- Nav categorías (Vue llena #category-nav) -->
+  <nav class="bottom-nav" aria-label="Categorías del menú">
+    <div class="pub-nav-header"></div>
+    <div class="nav-scroll" id="category-nav"></div>
+  </nav>
+
+  <!-- Vue renderiza aquí la carta -->
+  <div class="app-shell">
+    <main class="view" id="menu-view" aria-live="polite"></main>
+  </div>
+
+  <footer class="sob-footer">
+    <p>Sláinte &nbsp;&middot;&nbsp; Céad míle fáilte</p>
+  </footer>
+
+
+<noscript>
+<div style="max-width:1040px;margin:0 auto;padding:2rem clamp(1rem,4vw,2rem) 5rem;background:#0c0c0c;font-family:sans-serif;color:rgba(255,255,255,0.82);">
+  <div style="display:flex;align-items:baseline;gap:0.8rem;margin-top:3rem;margin-bottom:0.35rem;">
+    <span style="font-family:serif;font-size:0.65rem;color:rgba(219,168,42,0.35);">01</span>
+    <span style="font-size:0.55rem;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,0.45);">De Barril</span>
+    <span style="flex:1;height:1px;background:rgba(219,168,42,0.18);display:block;margin-bottom:0.1rem;"></span>
+  </div>
+  <ul style="list-style:none;padding:0;margin:0;">
+    <li style="display:flex;align-items:center;justify-content:space-between;gap:0.8rem;padding:0.65rem 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+      <span>Guinness</span>
+      <span style="display:flex;gap:0;flex-shrink:0;">
+        <span style="display:flex;flex-direction:column;align-items:flex-end;padding:0 0.42rem 0 0;"><span style="font-size:0.4rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.16);">½ Pint</span><strong style="font-size:1rem;color:#dba82a;">3,3€</strong></span>
+        <span style="display:flex;flex-direction:column;align-items:flex-end;padding:0 0 0 0.42rem;border-left:1px solid rgba(255,255,255,0.07);"><span style="font-size:0.4rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.16);">Pint</span><strong style="font-size:1rem;color:#dba82a;">6€</strong></span>
+      </span>
+    </li>
+    <li style="display:flex;align-items:center;justify-content:space-between;gap:0.8rem;padding:0.65rem 0;border-bottom:1px solid rgba(255,255,255,0.05);"><span>Murphy's Red</span><strong style="color:#dba82a;">3,3€ / 6€</strong></li>
+    <li style="display:flex;align-items:center;justify-content:space-between;gap:0.8rem;padding:0.65rem 0;border-bottom:1px solid rgba(255,255,255,0.05);"><span>Paulaner</span><strong style="color:#dba82a;">3,3€ / 6€</strong></li>
+    <li style="display:flex;align-items:center;justify-content:space-between;gap:0.8rem;padding:0.65rem 0;"><span>Amstel</span><strong style="color:#dba82a;">2,2€ / 4€</strong></li>
+  </ul>
+</div>
+</noscript>
+
+</body>
+</html>

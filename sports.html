@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deportes en Directo - Sean O'Brian's Irish Pub Valencia</title>
+    <meta name="description" content="Ver deportes en directo en Valencia ▸ Sean O'Brian's Irish Pub. Fútbol, rugby, NBA y más. Premier League, Six Nations y eventos especiales.">
+    <link rel="canonical" href="https://seanobrians.com/sports.html">
+    <link rel="alternate" hreflang="es" href="https://seanobrians.com/sports.html">
+    <link rel="alternate" hreflang="en" href="https://seanobrians.com/en/coming-soon-sports.html">
+    <link rel="alternate" hreflang="x-default" href="https://seanobrians.com/sports.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Deportes en Directo - Sean O'Brian's Irish Pub Valencia">
+    <meta property="og:description" content="Fútbol, rugby, NBA y más deportes en directo en el pub irlandés de Valencia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seanobrians.com/sports.html">
+    <meta property="og:image" content="https://seanobrians.com/sports.jpg">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Sean O'Brian's Irish Pub Valencia">
+    <meta name="robots" content="index, follow">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Deportes en Directo - Sean O'Brian's Irish Pub Valencia">
+    <meta name="twitter:description" content="Fútbol, rugby, NBA y más deportes en directo en el pub irlandés de Valencia.">
+    <meta name="twitter:image" content="https://seanobrians.com/sports.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Cinzel+Decorative:wght@700&family=Lato:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Cinzel+Decorative:wght@700&family=Lato:wght@400;600;700&display=swap"></noscript>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logoTransparente.svg">
+    <style>
+        .sports-page {
+            min-height: calc(100vh - 80px);
+            background: var(--cream);
+            padding: 3rem 0.5rem 4rem;
+        }
+
+        .sports-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .sports-header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.6rem, 5vw, 2.6rem);
+            color: var(--primary-green);
+            letter-spacing: 0.06em;
+            margin: 0 0 0.5rem;
+        }
+
+        .sports-header .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.04em;
+        }
+
+        .sports-header .gold-rule {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            width: min(60%, 320px);
+            margin: 1.2rem auto 0;
+        }
+
+        .sports-header .gold-rule span {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .sports-header .gold-rule i {
+            width: 7px;
+            height: 7px;
+            border: 1px solid var(--gold);
+            transform: rotate(45deg);
+            background: rgba(201, 169, 97, 0.15);
+            flex-shrink: 0;
+        }
+
+        .fixture-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .fixture-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 2px solid rgba(201, 169, 97, 0.45);
+            box-shadow: 0 8px 32px rgba(74, 24, 37, 0.18), 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .no-fixture {
+            text-align: center;
+            padding: 4rem 1rem;
+            color: var(--text-secondary);
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.06em;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2.5rem;
+            padding: 0.6rem 1.4rem;
+            background: var(--primary-green);
+            color: var(--light-gold);
+            font-family: 'Lato', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid rgba(201, 169, 97, 0.35);
+            transition: var(--transition);
+        }
+
+        .back-button:hover {
+            background: var(--dark-green);
+            border-color: rgba(201, 169, 97, 0.7);
+            color: #f0c844;
+        }
+
+        .back-button svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        @media (max-width: 600px) {
+            .sports-page { padding: 1.5rem 0 3rem; }
+            .fixture-container { padding: 0; }
+            .fixture-img { border-left: none; border-right: none; border-width: 1px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logoTransparente.svg" alt="Sean O'Brian's logo" class="logo-shamrock">
+                    <div class="logo-text">
+                        <span class="logo-name">Sean O'Brian's</span>
+                        <span class="logo-sub">Irish Bar</span>
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="index.html#sobre-nosotros" data-i18n="nav.about">Nosotros</a></li>
+                <li><a href="index.html#ubicacion" data-i18n="nav.location">Ubicación</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <button id="langToggle">
+                    <span id="langCurrent">ES</span>
+                    <svg viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M0 0l5 6 5-6z"/></svg>
+                </button>
+                <ul class="lang-dropdown">
+                    <li><button data-lang="es">Español</button></li>
+                    <li><button data-lang="en">English</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <section class="sports-page">
+        <div class="sports-header">
+            <h1 data-i18n="sports.title">Retransmisión de Deportes</h1>
+            <p class="subtitle" data-i18n="sports.week.subtitle">Partidos de esta semana en el pub</p>
+            <div class="gold-rule"><span></span><i></i><span></span></div>
+        </div>
+
+        <div class="fixture-container">
+            <img id="fixture-img" class="fixture-img" src="" alt="Partidos de esta semana">
+            <p id="no-fixture" class="no-fixture" style="display:none" data-i18n="sports.no.fixture">
+                Próximamente — partidos de esta semana
+            </p>
+        </div>
+
+        <div style="text-align:center">
+            <a href="index.html" class="back-button">
+                <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                <span data-i18n="back.btn">Volver al Inicio</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="irish-blessing" data-i18n="footer.blessing">Céad míle fáilte</p>
+                <p data-i18n="footer.rights">&copy; 2026 Sean O'Brian's - Pub Irlandés. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="sports-config.js"></script>
+    <script src="translations.js"></script>
+    <script>
+        (function () {
+            const img = document.getElementById('fixture-img');
+            const noFixture = document.getElementById('no-fixture');
+            if (SPORTS_CONFIG && SPORTS_CONFIG.image) {
+                img.src = SPORTS_CONFIG.image;
+                img.alt = 'Partidos de esta semana';
+                img.onerror = function () {
+                    img.style.display = 'none';
+                    noFixture.style.display = 'block';
+                };
+            } else {
+                img.style.display = 'none';
+                noFixture.style.display = 'block';
+            }
+        })();
+    </script>
+</body>
+</html>
