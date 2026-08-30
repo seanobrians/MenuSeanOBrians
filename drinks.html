@@ -23,8 +23,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap"></noscript>
 
-  <script type="module" crossorigin src="./drinks-assets/index-D1hdGOJb.js"></script>
-  <link rel="stylesheet" crossorigin href="./drinks-assets/index-DjDvI_ES.css">
+  <script type="module" crossorigin src="./drinks-assets/index-D92l84-v.js"></script>
+  <link rel="stylesheet" crossorigin href="./drinks-assets/index-D44YRrl3.css">
 
   <style>
 
@@ -551,6 +551,94 @@
 
 
   /* ──────────────────────────────────────
+     MENU IMAGE CARD
+  ────────────────────────────────────── */
+  .menu-img-card {
+    display: block !important;
+    position: relative !important;
+    margin: clamp(1.5rem, 3vw, 2.5rem) auto 0 !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    max-width: 420px !important;
+    width: 100% !important;
+    border: 1px solid rgba(219,168,42,0.18) !important;
+    cursor: pointer !important;
+    background: none !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+  .menu-img-card img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    transition: transform 0.5s ease, filter 0.35s !important;
+    filter: brightness(0.92) !important;
+  }
+  .menu-img-card:hover img {
+    transform: scale(1.03) !important;
+    filter: brightness(1) !important;
+  }
+  .menu-img-overlay {
+    position: absolute !important;
+    bottom: 0 !important; left: 0 !important; right: 0 !important;
+    padding: 0.9rem 1rem !important;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%) !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    pointer-events: none !important;
+  }
+  .menu-img-label {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    color: rgba(219,168,42,0.85) !important;
+  }
+
+  /* ──────────────────────────────────────
+     LIGHTBOX
+  ────────────────────────────────────── */
+  .sob-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    background: rgba(0,0,0,0.92);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .sob-lightbox.is-open {
+    display: flex;
+  }
+  .sob-lightbox img {
+    max-width: min(520px, 100%);
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 8px 60px rgba(0,0,0,0.8);
+  }
+  .sob-lightbox-close {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.7);
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, color 0.2s;
+  }
+  .sob-lightbox-close:hover {
+    background: rgba(255,255,255,0.16);
+    color: #fff;
+  }
+
+  /* ──────────────────────────────────────
      FOOTER
   ────────────────────────────────────── */
   .sob-footer {
@@ -648,6 +736,29 @@
   <footer class="sob-footer">
     <p>Sláinte &nbsp;&middot;&nbsp; Céad míle fáilte</p>
   </footer>
+
+  <!-- Lightbox -->
+  <div class="sob-lightbox" id="sob-lightbox" role="dialog" aria-modal="true" aria-label="Cocktail Menu">
+    <button class="sob-lightbox-close" id="sob-lightbox-close" aria-label="Cerrar">✕</button>
+    <img src="./cocktail-menu.jpg" alt="Carta de Cócteles Sean O'Brian's">
+  </div>
+
+  <script>
+    (function () {
+      var lb    = document.getElementById('sob-lightbox');
+      var close = document.getElementById('sob-lightbox-close');
+
+      function open()  { lb.classList.add('is-open');    document.body.style.overflow = 'hidden'; }
+      function shut()  { lb.classList.remove('is-open'); document.body.style.overflow = ''; }
+
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('.menu-img-card')) { e.preventDefault(); open(); }
+      });
+      close.addEventListener('click', shut);
+      lb.addEventListener('click', function (e) { if (e.target === lb) shut(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') shut(); });
+    })();
+  </script>
 
 
 <noscript>

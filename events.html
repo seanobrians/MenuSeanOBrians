@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Eventos Semanales – Sean O'Brian's Irish Pub Valencia</title>
+  <meta name="description" content="Eventos semanales en Sean O'Brian's Irish Pub Valencia: Happy Hour, Noche de Cócteles, Torneo de Pool e Intercambio de Idiomas.">
+  <link rel="canonical" href="https://seanobrians.com/events.html">
+  <link rel="alternate" hreflang="es" href="https://seanobrians.com/events.html">
+  <link rel="alternate" hreflang="en" href="https://seanobrians.com/events.html">
+  <link rel="icon" href="logoTransparente.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #0c0c0c;
+      color: rgba(255,255,255,0.82);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── TOPBAR ── */
+    .sob-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1rem, 4vw, 2.5rem);
+      height: 48px;
+      background: #080808;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .sob-back {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.28);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .sob-back:hover { color: rgba(255,255,255,0.65); }
+    .sob-back svg {
+      width: 14px; height: 14px;
+      stroke: currentColor; fill: none;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .topbar-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(219,168,42,0.55);
+      text-decoration: none;
+    }
+
+    /* ── HERO ── */
+    .sob-hero {
+      position: relative;
+      width: 100%;
+      height: clamp(220px, 40vw, 420px);
+      background: url('./guinness.jpg') center 35% / cover no-repeat;
+      overflow: hidden;
+    }
+    .sob-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to top, #0c0c0c 0%, rgba(10,10,10,0.5) 55%, rgba(0,0,0,0.4) 100%);
+    }
+    .sob-hero-content {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: clamp(1.2rem, 4vw, 2.5rem) clamp(1.2rem, 5vw, 3rem);
+      z-index: 2;
+    }
+    .sob-eyebrow {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(0.55rem, 1.2vw, 0.65rem);
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: rgba(219,168,42,0.6);
+      margin-bottom: clamp(0.3rem, 1vw, 0.6rem);
+    }
+    .sob-title {
+      font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
+      font-size: clamp(1.6rem, 5vw, 4.5rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: clamp(1px, 0.6vw, 5px);
+      line-height: 1;
+      text-shadow: 0 2px 32px rgba(0,0,0,0.7);
+    }
+    .sob-subtitle {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      margin-top: 0.6rem;
+      letter-spacing: 1px;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .events-wrap {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem) 5rem;
+    }
+
+    /* ── EVENT CARD ── */
+    .event-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: #111;
+    }
+    .event-card:nth-child(even) { direction: rtl; }
+    .event-card:nth-child(even) > * { direction: ltr; }
+
+    .event-img {
+      position: relative;
+      overflow: hidden;
+      min-height: clamp(280px, 40vw, 480px);
+    }
+    .event-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .event-card:hover .event-img img { transform: scale(1.03); }
+
+    .event-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3.5vw, 2.5rem);
+      background: #111;
+    }
+
+    .event-day {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(0.5rem, 1vw, 0.58rem);
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: rgba(219,168,42,0.55);
+      margin-bottom: 0.7rem;
+    }
+
+    .event-name {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: clamp(1.3rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .event-divider {
+      width: 40px;
+      height: 1px;
+      background: rgba(219,168,42,0.4);
+      margin-bottom: 1rem;
+    }
+
+    .event-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(0.82rem, 1.5vw, 0.92rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+
+    .event-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .event-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.4rem 0.85rem;
+      background: rgba(219,168,42,0.08);
+      border: 1px solid rgba(219,168,42,0.22);
+      border-radius: 20px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(0.7rem, 1.3vw, 0.78rem);
+      font-weight: 600;
+      color: #dba82a;
+      letter-spacing: 0.3px;
+    }
+    .event-tag svg {
+      width: 12px; height: 12px;
+      stroke: currentColor; fill: none;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    /* ── FOOTER ── */
+    .sob-footer {
+      text-align: center;
+      padding: 2.5rem 1rem 4rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .sob-footer p {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(0.42rem, 0.9vw, 0.52rem);
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      color: rgba(219,168,42,0.2);
+    }
+
+    /* ── PLACEHOLDER ── */
+    .event-img--placeholder {
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .event-img-ph {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      opacity: 0.35;
+    }
+    .event-img-ph-icon { font-size: 3rem; }
+    .event-img-ph-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ── RESPONSIVE TABLET ── */
+    @media (max-width: 700px) {
+      .event-card {
+        grid-template-columns: 1fr;
+        direction: ltr !important;
+      }
+      .event-card:nth-child(even) { direction: ltr; }
+      .event-img { min-height: 260px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <header class="sob-topbar">
+    <a href="index.html" class="sob-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Inicio
+    </a>
+    <a href="index.html" class="topbar-logo">Sean O'Brian's</a>
+  </header>
+
+  <!-- Hero -->
+  <div class="sob-hero">
+    <div class="sob-hero-content">
+      <span class="sob-eyebrow">Irish Pub &middot; Valencia</span>
+      <h1 class="sob-title">Weekly Events</h1>
+      <span class="sob-subtitle">Eventos Semanales</span>
+    </div>
+  </div>
+
+  <!-- Events -->
+  <main class="events-wrap">
+
+    <!-- 1. HAPPY HOUR -->
+    <article class="event-card">
+      <div class="event-img">
+        <img src="./event-happyhour.jpg" alt="Happy Hour Sean O'Brian's" loading="eager">
+      </div>
+      <div class="event-body">
+        <span class="event-day">Lunes &ndash; Jueves &nbsp;·&nbsp; Monday &ndash; Thursday</span>
+        <h2 class="event-name">Happy Hour</h2>
+        <div class="event-divider"></div>
+        <p class="event-desc">
+          Todas las semanas de lunes a jueves, de 16:00 a 20:00, disfruta de nuestros precios especiales en barra.
+          La tarde perfecta para arrancar con buen ambiente y mejor precio.<br><br>
+          Every Monday to Thursday, 4&ndash;8 PM. Special prices all evening long.
+        </p>
+        <div class="event-tags">
+          <span class="event-tag">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            16:00 – 20:00
+          </span>
+          <span class="event-tag">🍺 Pinta 3€</span>
+          <span class="event-tag">🥃 Copas 6€</span>
+          <span class="event-tag">🥂 Chupitos 1,5€</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. COCKTAIL TUESDAY -->
+    <article class="event-card">
+      <div class="event-img">
+        <img src="./event-cocktail.jpg" alt="Cocktail Tuesday Sean O'Brian's" loading="lazy">
+      </div>
+      <div class="event-body">
+        <span class="event-day">Martes &nbsp;·&nbsp; Tuesday</span>
+        <h2 class="event-name">Cocktail<br>Evenings</h2>
+        <div class="event-divider"></div>
+        <p class="event-desc">
+          Los martes son noche de cócteles en Sean O'Brian's. Toda la noche, cócteles de autor a precio especial.
+          Aqua de Valencia, Aperol Spritz, Limoncello Spritz, Cheeky Vimto, Cheeky Irn Bru y más.<br><br>
+          Every Tuesday, all night long. Exceptional cocktails, perfectly priced.
+        </p>
+        <div class="event-tags">
+          <span class="event-tag">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Todo el día · All night
+          </span>
+          <span class="event-tag">🍹 Cócteles 6€</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. POOL TOURNAMENT -->
+    <article class="event-card">
+      <div class="event-img">
+        <img src="./event-pool.jpg" alt="Pool Tournament Sean O'Brian's" loading="lazy">
+      </div>
+      <div class="event-body">
+        <span class="event-day">Miércoles &nbsp;·&nbsp; Wednesday</span>
+        <h2 class="event-name">Pool<br>Tournament</h2>
+        <div class="event-divider"></div>
+        <p class="event-desc">
+          Todos los miércoles a las 20:00 celebramos nuestro torneo de billar con reglas internacionales.
+          Buena música, gran ambiente y la mejor compañía. Inscríbete, compite y llévate el premio.<br><br>
+          Every Wednesday at 8 PM. International pool rules. Prizes for the winner. Compete. Enjoy. Win.
+        </p>
+        <div class="event-tags">
+          <span class="event-tag">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            20:00
+          </span>
+          <span class="event-tag">🎱 Entrada 5€</span>
+          <span class="event-tag">🏆 Prizes for winner</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. LANGUAGE EXCHANGE -->
+    <article class="event-card">
+      <div class="event-img">
+        <img src="./event-language.jpg" alt="Intercambio de Idiomas Sean O'Brian's" loading="lazy">
+      </div>
+      <div class="event-body">
+        <span class="event-day">Lunes &nbsp;·&nbsp; Monday</span>
+        <h2 class="event-name">Language<br>Exchange</h2>
+        <div class="event-divider"></div>
+        <p class="event-desc">
+          Los lunes son el día de los idiomas en Sean O'Brian's. Ven a practicar inglés, español o cualquier otro idioma en un ambiente relajado y auténtico de pub irlandés.
+          Conoce gente nueva, mejora tu nivel y disfruta de una pinta.<br><br>
+          Every Monday. Come and practise your languages in a relaxed Irish pub atmosphere. Meet new people, share cultures.
+        </p>
+        <div class="event-tags">
+          <span class="event-tag">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Lunes · Monday
+          </span>
+          <span class="event-tag">🌍 All languages welcome</span>
+          <span class="event-tag">🍺 Free entry</span>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="sob-footer">
+    <p>Sláinte &nbsp;&middot;&nbsp; Céad míle fáilte</p>
+  </footer>
+
+</body>
+</html>

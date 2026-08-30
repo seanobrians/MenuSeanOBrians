@@ -5,6 +5,7 @@ const translations = {
         'nav.location': 'Ubicación',
         'nav.contact': 'Contacto',
         'nav.drinks': 'Carta',
+        'nav.events': 'Eventos',
 
         'hero.title': "Bienvenido a Sean O'Brian's",
         'hero.subtitle': 'El auténtico pub irlandés de Valencia',
@@ -27,6 +28,8 @@ const translations = {
         'feature2.desc': 'Ambiente auténtico irlandés para disfrutar juntos',
         'feature3.title': 'Retransmisión de Deportes',
         'feature3.desc': 'Tus deportes favoritos en un ambiente auténtico',
+        'feature4.title': 'Weekly Events',
+        'feature4.desc': 'Happy Hour, Cocktail Tuesdays, Torneo de Pool e Intercambio de Idiomas',
 
         'location.title': 'Encuéntranos',
         'location.address.title': 'Nuestra Dirección',
@@ -100,6 +103,7 @@ const translations = {
         'nav.location': 'Location',
         'nav.contact': 'Contact',
         'nav.drinks': 'Menu',
+        'nav.events': 'Events',
 
         'hero.title': "Welcome to Sean O'Brian's",
         'hero.subtitle': 'The authentic Irish pub in Valencia',
@@ -122,6 +126,8 @@ const translations = {
         'feature2.desc': 'Authentic Irish atmosphere to enjoy together',
         'feature3.title': 'Live Sports',
         'feature3.desc': 'Your favourite sports in an authentic setting',
+        'feature4.title': 'Weekly Events',
+        'feature4.desc': 'Happy Hour, Cocktail Tuesdays, Pool Tournament & Language Exchange',
 
         'location.title': 'Find Us',
         'location.address.title': 'Our Address',
